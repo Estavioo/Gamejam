@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3lpxxmphcrf"]
+
+[ext_resource type="Script" path="res://muzzle_rotate.gd" id="1_faap1"]
+[ext_resource type="Texture2D" uid="uid://blk22wnjmw6tc" path="res://icon.svg" id="1_ivjw8"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(31, 13)
+script = ExtResource("1_faap1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3.8147e-06, 0)
+scale = Vector2(0.296875, 0.296875)
+texture = ExtResource("1_ivjw8")
+
+[node name="Marker2D" type="Marker2D" parent="Sprite2D"]
+scale = Vector2(4, 4)

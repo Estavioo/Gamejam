@@ -1,0 +1,21 @@
+{
+    "stick": {
+        "ItemCategory": "Resource",
+        "StackSize": 99,
+        "Description": "THANK YOU RAM ILY"
+        },
+    "Spear": {
+	"ItemCategory": "Spear",
+	"ItemAttack": 7,
+	"ItemSpeed": 1,
+	"StackSize": 1,
+	"Description": "Just a spear. Nuf' said."
+        },
+    "Diamond Sword": {
+	"ItemCategory": "Sword",
+	"ItemAttack": 13,
+	"ItemSpeed": 0.75,
+	"StackSize": 1,
+	"Description": "I SWEAR I DID NOT COPY THIS FROM MINECRAFT"
+        }  
+}

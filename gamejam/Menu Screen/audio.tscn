@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdm24yv7uvgax"]
+
+[ext_resource type="Script" path="res://Menu Screen/audio.gd" id="1_hikef"]
+
+[node name="Audio" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hikef")
+
+[node name="Labels" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -358.0
+offset_top = -197.0
+offset_right = 9.0
+offset_bottom = -38.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.96866, 2.61352)
+
+[node name="Master" type="Label" parent="Labels"]
+layout_mode = 2
+text = "Master"
+
+[node name="Music" type="Label" parent="Labels"]
+layout_mode = 2
+text = "Music"
+
+[node name="Sound FX" type="Label" parent="Labels"]
+layout_mode = 2
+text = "Sound FX"
+
+[node name="Master" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 356.0
+offset_top = 136.0
+offset_right = 805.0
+offset_bottom = 193.0
+
+[node name="Music" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 229.0
+offset_right = 805.0
+offset_bottom = 245.0
+
+[node name="Sound FX" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 306.0
+offset_right = 817.0
+offset_bottom = 322.0
+
+[node name="Back To Options" type="Button" parent="."]
+layout_mode = 0
+offset_left = 499.0
+offset_top = 362.0
+offset_right = 606.0
+offset_bottom = 416.0
+scale = Vector2(1.51613, 1.92)
+text = "Back"
+
+[connection signal="pressed" from="Back To Options" to="." method="_on_back_to_options_pressed"]

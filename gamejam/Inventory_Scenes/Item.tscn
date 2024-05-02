@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://xr60y6ra46an"]
+
+[ext_resource type="Script" path="res://scripts/Item.gd" id="1_2rcr6"]
+[ext_resource type="Texture2D" uid="uid://63bumi31tt5x" path="res://item_icons/Diamond Sword.png" id="2_5sluo"]
+
+[node name="Item" type="Node2D"]
+script = ExtResource("1_2rcr6")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 44.0
+mouse_filter = 2
+texture = ExtResource("2_5sluo")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 28.0
+offset_top = 34.0
+offset_right = 68.0
+offset_bottom = 60.0
+scale = Vector2(0.7, 0.7)
+text = "99"

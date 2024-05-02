@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3pynyl5reysc"]
+
+[ext_resource type="Script" path="res://projectile/seed_projectile.gd" id="1_765a1"]
+[ext_resource type="Texture2D" uid="uid://cmtr4lwcan4ph" path="res://projectile/SEED BULLET.png" id="2_o0bwr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0waop"]
+radius = 3.5
+
+[node name="Seed_Projectile" type="Area2D" groups=["Projectile"]]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_765a1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4.76837e-07, -4.76837e-07)
+scale = Vector2(0.333333, 0.333333)
+texture = ExtResource("2_o0bwr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0waop")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+rotation = 0.120428
+scale = Vector2(0.175179, 0.146539)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]

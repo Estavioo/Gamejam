@@ -1,0 +1,63 @@
+[gd_scene load_steps=2 format=3 uid="uid://cm6pyde7rqghx"]
+
+[ext_resource type="Script" path="res://Menu Screen/video.gd" id="1_o6vpd"]
+
+[node name="Video" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o6vpd")
+
+[node name="Screen" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.5
+offset_top = -28.0
+offset_right = 65.5
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.44138, 2.15424)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Screen"]
+layout_mode = 2
+
+[node name="VLabels" type="VBoxContainer" parent="Screen/HBoxContainer"]
+layout_mode = 2
+
+[node name="Fullscreen" type="Label" parent="Screen/HBoxContainer/VLabels"]
+layout_mode = 2
+text = "Fullscreen"
+
+[node name="Borderless" type="Label" parent="Screen/HBoxContainer/VLabels"]
+layout_mode = 2
+text = "Borderless"
+
+[node name="Checks" type="VBoxContainer" parent="Screen/HBoxContainer"]
+layout_mode = 2
+
+[node name="Fullscreen" type="CheckButton" parent="Screen/HBoxContainer/Checks"]
+layout_mode = 2
+
+[node name="Borderless" type="CheckButton" parent="Screen/HBoxContainer/Checks"]
+layout_mode = 2
+
+[node name="BacktoOptions" type="Button" parent="."]
+layout_mode = 0
+offset_left = 538.0
+offset_top = 415.0
+offset_right = 590.0
+offset_bottom = 452.0
+scale = Vector2(2.36229, 1.94232)
+text = "Back"
+
+[connection signal="toggled" from="Screen/HBoxContainer/Checks/Fullscreen" to="." method="_on_fullscreen_toggled"]
+[connection signal="toggled" from="Screen/HBoxContainer/Checks/Borderless" to="." method="_on_borderless_toggled"]
+[connection signal="pressed" from="BacktoOptions" to="." method="_on_backto_options_pressed"]
